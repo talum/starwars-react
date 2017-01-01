@@ -1,6 +1,6 @@
 import React from 'react'
 import axios from 'axios'
-import Movie from './Movie'
+import Character from './Character'
 import Button from './Button'
 
 class Main extends React.Component {
@@ -32,12 +32,12 @@ class Main extends React.Component {
   }
 
   render() {
-    const movies = this.state.results
-    const movieItems = movies.map((movie, id) => <Movie key={id} movie={movie}/>)
+    const characters = this.state.results
+    const characterItems = characters.map((character, id) => <Character key={id} character={character}/>)
 
     return (
       <div>
-        {movieItems}
+        {characterItems}
         { this.state.shouldShowMore && <Button fetchData={this.fetchData}/> }
       </div>
     )
